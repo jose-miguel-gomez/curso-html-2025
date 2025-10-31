@@ -1,0 +1,60 @@
+/* --- 1. Reset Básico y Fondo --- */
+body {
+    /* Usar un modelo de caja más predecible */
+    box-sizing: border-box;
+    /* Fondo que no sea blanco puro (más suave a la vista) */
+    background-color: #f4f4f9;
+    /* Tipografía moderna y espaciado */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+}
+
+/* --- 2. Estilo del Título Principal --- */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #3498db; /* Línea decorativa */
+    padding-bottom: 10px;
+}
+
+/* --- 3. Mejorando la Lista de Enlaces --- */
+/* Agrupamos los enlaces en un contenedor para centrarlos y limitar su ancho */
+body > p {
+    max-width: 600px;
+    margin: 0 auto 10px auto; /* Centrar y dar un margen inferior */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.2s; /* Para el efecto hover */
+}
+
+/* Efecto al pasar el ratón */
+body > p:hover {
+    transform: translateX(5px); /* Desplazamiento ligero a la derecha */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 4. Estilo del Enlace (la etiqueta 'a') --- */
+a {
+    /* El enlace ocupa todo el 'p' */
+    display: block; 
+    text-decoration: none; /* Quitar el subrayado feo */
+    color: #3498db;
+    padding: 12px 15px;
+    font-weight: 600; /* Un poco más de peso */
+    transition: color 0.3s;
+}
+
+/* Color cuando se visita */
+a:visited {
+    color: #8e44ad; /* Un morado, para que sepas cuáles has abierto */
+}
+
+/* Color al pasar el ratón por el enlace */
+a:hover {
+    color: #e74c3c; /* Un rojo vibrante */
+}
+

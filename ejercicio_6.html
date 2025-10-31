@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Selectores CSS</title>
+    <style>
+        /* encabezado h1 tuneado */
+        h1 {
+            font-family: Arial, sans-serif;
+            /* Establece la fuente Arial, con una alternativa sans-serif */
+            background-color: rgb(255, 0, 0);
+            /* Establece marcado en rojo */
+            color: rgb(238, 255, 0);
+            /* Establece color de texto en amarillo */
+        }
+
+        /* parrafo tuneado */
+        p {
+            color: blue;
+            /* Cambia el color del texto a azul */
+            font-size: 16px;
+            /* Establece el tamaño del texto a 16 píxeles */
+        }
+
+        /* todos los div tuneados */
+        div {
+            background-color: rgb(255, 0, 140);
+            /* Establece el fondo rosa */
+        }
+
+        /* clase contenedor tuneado */
+        .contenedor {
+            margin: 20px;
+            /* Establece un margen de 20 píxeles alrededor del contenedor */
+        }
+
+        /* clase caja tuneado */
+        .caja {
+            padding: 15px;
+            /* Establece un relleno de 15 píxeles dentro de la caja */
+            border: 2px solid black;
+            /* Establece un borde sólido de 2 píxeles de color negro */
+            background-color: rgb(208, 255, 0);
+        }
+
+        /* id caja_modificada tuneado */
+        #caja_modificada {
+            border-radius: 25px;
+            background-color: rgb(0, 255, 55);
+        }
+        #p_tuneado {
+            color: rgb(149, 150, 144);
+            font-size: 30px;
+        }
+
+        #caja_modificada_2 {
+            border-radius: 25px;
+            width: 50%;
+            margin: 0 auto
+        }
+
+        #caja_modificada_2:hover {
+            transform: translate(50px, 100px);
+            transform: rotate(45deg);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>Encabezado tuneado</h1>
+        <br>
+        <p>Este es un párrafo tuneado </p>
+        <br>
+        <div class="caja">
+            <p>Esta es una caja con fondo amarillo, relleno de 15 píxeles y borde negro de 2 píxeles.</p>
+        </div>
+        <br>
+        <div class="caja" id="caja_modificada">
+            <p id="p_tuneado"> Esta es otra caja con modificaciones.</p>
+        </div>
+        <br><br><br>
+        <div class="caja" id="caja_modificada_2">
+            <p> Y otra caja más.</p>
+        </div>
+    </div>
+</body>
+
+</html>
