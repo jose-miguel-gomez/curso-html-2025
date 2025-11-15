@@ -1,69 +1,43 @@
-.contenedor {
-    background-color: #03fdbf;
-    width: 100%;
-    padding: 5px;
-    border: 15px double #f80303;
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.titulo {
-    width: 100%;
-    padding: 5px;
-    border-bottom: 5px solid #070707;
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    
-}
-
-.caja1 {
-    width: 75%;
-    background-color: rgb(255, 0, 191);
-    border: 10px dotted #3b12f3;
-    display: flex;
-    justify-content: space-between;
-}
-
-.caja2 {
-    margin: 15px;
-    width: 25%;
-    height: 100px;
-    border: 5px solid;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.caja3 {
-    width: 50%;
-    height: 100px;
-    margin: 25px;
-    border: dashed red;
-    color: green;
-    font-size: 20px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.caja2 p {
-    font-size: 40px;
-}
-
+/* Selector de Elemento */
  h1 {
-    color: blue;  
-    font-family: Arial, sans-serif;  
+    color: blue;  /* Cambia el color del texto de todos los <h1> a azul */
+    font-family: Arial, sans-serif;  /* Cambia la fuente del texto de todos los <h1> */
     padding: 10px;  /* Añade un relleno de 10 píxeles */
-    border-bottom: 5px solid yellow;
+    margin-bottom: 20px;  /* Añade un margen inferior de 20 píxeles */
+    border: 2px solid black;  /* Añade un borde sólido de 2 píxeles de color negro */
     background-color: lightgray;  /* Cambia el color de fondo a gris claro */
   }
+  
+  /* Selector de Clase */
+  .importante {
+    color: red;  /* Cambia el color del texto de los elementos con la clase "importante" a rojo */
+    font-family: 'Courier New', Courier, monospace;  /* Cambia la fuente del texto de los elementos con la clase "importante" */
+    padding: 10px;  /* Añade un relleno de 10 píxeles */
+    margin: 10px 0;  /* Añade un margen superior e inferior de 10 píxeles */
+    border: 1px dashed black;  /* Añade un borde discontinuo de 1 píxel de color negro */
+    background-color: lightyellow;  /* Cambia el color de fondo a amarillo claro */
+  }
+  
+  /* Selector de Clase adicional */
+  .destacado {
+    font-size: 20px;  /* Cambia el tamaño del texto de los elementos con la clase "destacado" */
+    font-weight: bold;  /* Cambia el texto a negrita para los elementos con la clase "destacado" */
+    padding: 15px;  /* Añade un relleno de 15 píxeles */
+    margin: 10px 0;  /* Añade un margen superior e inferior de 10 píxeles */
+    border: 1px solid red;  /* Añade un borde sólido de 1 píxel de color rojo */
+    background-color: lightpink;  /* Cambia el color de fondo a rosa claro */
+  }
+  
+  /* Selector de ID */
+  #unico {
+    color: green;  /* Cambia el color del texto del elemento con el ID "unico" a verde */
+    font-family: 'Times New Roman', Times, serif;  /* Cambia la fuente del texto del elemento con el ID "unico" */
+    padding: 20px;  /* Añade un relleno de 20 píxeles */
+    margin: 20px 0;  /* Añade un margen superior e inferior de 20 píxeles */
+    border: 2px solid green;  /* Añade un borde sólido de 2 píxeles de color verde */
+    background-color: lightgreen;  /* Cambia el color de fondo a verde claro */
+  }
+ 
 
 
   

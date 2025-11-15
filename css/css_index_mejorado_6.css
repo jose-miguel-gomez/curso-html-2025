@@ -1,0 +1,109 @@
+/* Estilo general */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 30px;
+  color: #333;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 40px;
+}
+
+/* Grid principal */
+.grid-indice {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+/* Cada tarjeta */
+.grid-indice > li {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grid-indice > li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Títulos de sección */
+.grid-indice h4 {
+  color: #007BFF;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 5px;
+}
+
+/* Sub-listas */
+.grid-indice ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.grid-indice li ul li {
+  margin: 8px 0;
+}
+
+/* Enlaces */
+a {
+  text-decoration: none;
+  color: #34495e;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #007BFF;
+}
+
+a:hover {
+  color: #007BFF;
+}
+
+
+
+/* ==================================== */
+/* 3. Estilo de los Elementos de la Lista (Ejercicios) */
+/* ==================================== */
+
+/* Párrafos dentro de los elementos de lista (que contienen el enlace) */
+ul ul li p {
+    padding: 8px 15px;
+    margin: 0;
+    transition: background-color 0.2s; /* Transición suave para hover */
+}
+
+/* Hover en el elemento de lista para resaltar la fila completa */
+ul ul li p:hover {
+    background-color: #e9f5ff; /* Color muy claro al pasar el ratón */
+}
+
+/* Estilo de los enlaces (el texto del ejercicio) */
+a {
+    color: #007bff;
+    text-decoration: none; /* Eliminar el subrayado predeterminado */
+    font-weight: 500;
+}
+
+/* Estilo al pasar el ratón sobre el enlace */
+a:hover {
+    text-decoration: underline; /* Añadir subrayado al pasar el ratón */
+    color: #0056b3; /* Un azul más oscuro */
+}
+
+/* La descripción del ejercicio */
+ul ul li p {
+    /* Mantiene el texto descriptivo en negro */
+    color: #555; 
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Índice de Contenidos - Futurista 🚀</title>
+
+  <style>
+    /* === Fondo galáctico === */
+    body {
+      background: radial-gradient(circle at top right, #0d0d2b, #000);
+      color: #d0eaff;
+      font-family: 'Orbitron', 'Rajdhani', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      overflow-x: hidden;
+    }
+
+    /* Líneas animadas tipo circuito */
+    body::before, body::after {
+      content: "";
+      position: fixed;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background: 
+        repeating-linear-gradient(90deg, rgba(0,255,255,0.05) 0, rgba(0,255,255,0.05) 1px, transparent 1px, transparent 50px),
+        repeating-linear-gradient(0deg, rgba(0,255,255,0.05) 0, rgba(0,255,255,0.05) 1px, transparent 1px, transparent 50px);
+      z-index: -2;
+      animation: moveGrid 30s linear infinite;
+    }
+
+    @keyframes moveGrid {
+      from { transform: translate(0,0); }
+      to { transform: translate(50px, 50px); }
+    }
+
+    /* === Contenedor holográfico === */
+    .container {
+      background: rgba(20, 20, 50, 0.7);
+      border: 2px solid rgba(0,255,255,0.5);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      max-width: 850px;
+      margin: auto;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 0 25px rgba(0,255,255,0.3), inset 0 0 10px rgba(0,255,255,0.2);
+    }
+
+    /* === Título holográfico === */
+    h1 {
+      text-align: center;
+      color: #00ffff;
+      text-shadow: 0 0 15px #00ffff, 0 0 40px #00ccff;
+      font-size: 2.8rem;
+      letter-spacing: 3px;
+      margin-bottom: 1rem;
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00ffff, 0 0 30px #00ccff; }
+      to { text-shadow: 0 0 25px #66ffff, 0 0 60px #00e6e6; }
+    }
+
+    /* === Subtítulos === */
+    h3 {
+      color: #66ccff;
+      border-left: 5px solid #00ffff;
+      padding-left: 10px;
+      margin-top: 2rem;
+      text-transform: uppercase;
+      font-family: 'Rajdhani', sans-serif;
+    }
+
+    h4 {
+      color: #00e6e6;
+      text-shadow: 0 0 8px #00ffff;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+
+    /* === Listas === */
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    li {
+      margin: 0.6rem 0;
+      position: relative;
+    }
+
+    /* Icono futurista antes de cada ítem */
+    li::before {
+      content: "◈";
+      position: absolute;
+      left: -1.5rem;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    /* === Enlaces luminosos === */
+    a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    a:hover {
+      color: #fff;
+      text-shadow: 0 0 20px #00ffff, 0 0 30px #00ccff;
+    }
+
+    /* Sublistas con líneas neón */
+    ul ul {
+      border-left: 2px solid rgba(0,255,255,0.4);
+      margin-left: 1rem;
+      padding-left: 1rem;
+    }
+
+    /* === Pie de página === */
+    .footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #66ffff;
+      text-shadow: 0 0 10px #00ffff;
+      letter-spacing: 2px;
+      border-top: 1px solid rgba(0,255,255,0.3);
+      padding-top: 1rem;
+    }
+
+    /* === Animación responsiva === */
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .container {
+        padding: 1.2rem;
+      }
+    }
+
+    /* === Fuentes tecnológicas === */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rajdhani:wght@500&display=swap');
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>🚀 Índice de Contenidos 🚀</h1>
+
+<h3>Ejercicios</h3>
+    <ul> 
+      <li><h4>HTML</h4>
+        <ul>
+          <li><a href="ejercicio_1.html">Ejercicio 1:</a> Etiquetas básicas</li>
+          <li><a href="ejercicio_2.html">Ejercicio 2:</a> Listas</li>
+          <li><a href="ejercicio_3.html">Ejercicio 3:</a> Estructura básica</li>
+          <li><a href="ejercicio_4.html">Ejercicio 4:</a> Formularios</li>
+        </ul>
+      </li>
+
+        <li><h4>CSS</h4>
+            <ul>
+                <li> <a href="ejercicio_5.html">Ejercicio 5:</a> Introducción a CSS </li>
+                <li> <a href="ejercicio_6.html">Ejercicio 6:</a> Selectores CSS</li>
+                <li> <a href="ejercicio_7.html">Ejercicio 7:</a> Posicionamiento CSS </li>
+                <li> <a href="ejercicio_8.html">Ejercicio 8:</a> Igual que el anterior pero con CSS externo </li>
+            </ul>
+        </li>
+
+
+      <li><h4>Box Model</h4>
+        <ul>
+          <li><a href="ejercicio_9.html">Ejercicio 9:</a> Box Model (1)</li>
+          <li><a href="ejercicio_10.html">Ejercicio 10:</a> Box Model (2)</li>
+        </ul>
+      </li>
+
+      <li><h4>Flexbox Layout</h4>
+        <ul>
+          <li><a href="ejercicio_11.html">Ejercicio 11:</a> Flexbox Layout (1)</li>
+          <li><a href="ejercicio_12.html">Ejercicio 12:</a> Flexbox Layout (2)</li>
+        </ul>
+      </li>
+
+      <li><h4>Selectores CSS avanzados</h4>
+        <ul>
+          <li><a href="ejercicio_13.html">Ejercicio 13:</a> Selectores CSS avanzados</li>
+        </ul>
+      </li>
+
+      <li><h4>CSS Grid</h4>
+        <ul>
+          <li><a href="ejercicio_14.html">Ejercicio 14:</a> CSS Grid (1)</li>
+          <li><a href="ejercicio_15.html">Ejercicio 15:</a> CSS Grid (2)</li>
+          <li><a href="ejercicio_16.html">Ejercicio 16:</a> CSS Grid (3)</li>
+          <li><a href="ejercicio_17.html">Ejercicio 17:</a> CSS Grid (4)</li>
+          <li><a href="ejercicio_18.html">Ejercicio 18:</a> CSS Grid (5)</li>
+        </ul>
+      </li>
+
+      
+    </ul>
+
+    <div class="footer">
+      ⚡ José Miguel Gómez - Archivo de Ejercicios - Año 2025 ⚡
+    </div>
+  </div>
+</body>
+</html>
+

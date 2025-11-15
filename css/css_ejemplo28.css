@@ -1,0 +1,104 @@
+body {
+    font-family: "Segoe UI", Roboto, sans-serif;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #0d6efd;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+#indice {
+    position: sticky;
+    top: 75px; 
+    align-self: start;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+z-index: 1000;
+}
+ 
+
+#indice .accordion-link {
+    flex-grow: 1;
+    text-decoration: none;
+    color: #343a40;
+    padding: 0.5rem 0.75rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 1.2;
+}
+
+
+#indice .accordion-link:hover {
+    color: #0a5899;
+}
+
+/* Flecha del acordeón */
+#indice .accordion-button {
+  background: none;
+  box-shadow: none;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+/* Flecha original */
+#indice .accordion-button::after {
+  transform: rotate(0deg) scale(0.7); /* tamaño más pequeño */
+  margin-left: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Flecha girada cuando la sección está abierta */
+#indice .accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg) scale(0.7);
+}
+
+
+#indice .list-group-item {
+  border: none;
+  background-color: #f8f9fa;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.75rem 0.4rem 1.5rem;
+}
+
+#indice .list-group-item:hover {
+  background-color: #e9ecef;
+}
+
+/* Transición suave para el “slide” de submenús */
+.accordion-collapse {
+  transition: height 1s ease;
+}
+
+
+h2, h3 {
+  scroll-margin-top: 90px; 
+}
+
+h2{font-weight: bold;}
+
+
+
+@media (max-width: 767px) {
+  h2, h3 {
+  scroll-margin-top: 360px; 
+}
+
+
+footer {
+   background-color: #212529;
+   color: white;
+   text-align: center;
+   padding: 1rem;
+   margin-top: 2rem;
+}
+
+
+
+
+

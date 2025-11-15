@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo Combinado: CSS Grid y Media Queries</title>
+  <style>
+    /* Contenedor de la cuadrícula */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;  /* Tres columnas iguales */
+      gap: 10px;
+      padding: 10px;
+      background-color: lightgray;
+    }
+
+    /* Estilos de los elementos de la cuadrícula */
+    .grid-item {
+      background-color: lightcoral;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid black;
+    }
+
+    /* Media query para pantallas de hasta 800px de ancho */
+    @media (max-width: 800px) {
+      .grid-container {
+        grid-template-columns: 1fr;  /* Una sola columna */
+      }
+    }
+
+    /* Media query para pantallas entre 801px y 1200px de ancho */
+    @media (min-width: 801px) and (max-width: 1200px) {
+      .grid-container {
+        grid-template-columns: 1fr 1fr;  /* Dos columnas iguales */
+      }
+    }
+
+    /* Media query para pantallas de más de 1200px de ancho */
+    @media (min-width: 1201px) {
+      .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;  /* Tres columnas iguales */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-item">Elemento 1</div>
+    <div class="grid-item">Elemento 2</div>
+    <div class="grid-item">Elemento 3</div>
+    <div class="grid-item">Elemento 4</div>
+    <div class="grid-item">Elemento 5</div>
+    <div class="grid-item">Elemento 6</div>
+  </div>
+</body>
+</html>
+
+

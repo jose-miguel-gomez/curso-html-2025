@@ -1,0 +1,126 @@
+/* === Fondo nevado y colores navideños === */
+    body {
+      background: linear-gradient(180deg, #fefefe 0%, #f2f8ff 100%);
+      background-image: url('https://www.transparenttextures.com/patterns/snow.png');
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      color: #2c2c2c;
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    /* === Contenedor decorativo === */
+    .container {
+      background: white;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+      border: 4px solid #c0392b;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Copos decorativos */
+    .container::before, .container::after {
+      content: "❄";
+      position: absolute;
+      font-size: 2rem;
+      color: #2ecc71;
+      opacity: 0.2;
+    }
+    .container::before {
+      top: 10px;
+      left: 15px;
+    }
+    .container::after {
+      bottom: 10px;
+      right: 15px;
+    }
+
+    /* === Encabezados festivos === */
+    h1 {
+      text-align: center;
+      color: #c0392b;
+      font-family: 'Mountains of Christmas', cursive;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px #f1c40f;
+    }
+
+    h3 {
+      color: #27ae60;
+      margin-top: 2rem;
+      border-bottom: 3px solid #c0392b;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    h4 {
+      color: #b03a2e;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    /* === Listas === */
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    li {
+      margin: 0.4rem 0;
+      position: relative;
+    }
+
+    /* Estrella antes de cada ítem */
+    li::before {
+      content: "⭐";
+      color: #f1c40f;
+      margin-right: 8px;
+    }
+
+    /* === Enlaces === */
+    a {
+      color: #c0392b;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    a:hover {
+      color: #27ae60;
+      transform: translateX(5px);
+    }
+
+    /* === Sublistas decoradas === */
+    ul ul {
+      border-left: 3px solid #c0392b30;
+      margin-left: 1rem;
+      padding-left: 1.2rem;
+    }
+
+    /* === Pie decorativo === */
+    .footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-style: italic;
+      color: #888;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+      .container {
+        padding: 1.5rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    /* === Tipografía decorativa === */
+    @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap');

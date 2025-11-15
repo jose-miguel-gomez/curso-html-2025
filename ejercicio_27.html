@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Didáctico - Bootstrap Grid Responsive</title>
+    <!-- Incluir el CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .caja {
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .sidebar {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .contenido {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+
+        .tarjeta {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            color: white;
+            min-height: 150px;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: white;
+        }
+
+        .explicacion {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            margin-top: 5px;
+            color: #333;
+            font-weight: normal;
+        }
+
+        .info-breakpoint {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            z-index: 1000;
+        }
+
+        .info-breakpoint .bp-indicator {
+            display: none;
+        }
+
+        @media (max-width: 575.98px) {
+            .info-breakpoint .bp-xs { display: block; background: #dc3545; }
+        }
+
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            .info-breakpoint .bp-sm { display: block; background: #ffc107; }
+        }
+
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .info-breakpoint .bp-md { display: block; background: #0dcaf0; }
+        }
+
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            .info-breakpoint .bp-lg { display: block; background: #198754; }
+        }
+
+        @media (min-width: 1200px) {
+            .info-breakpoint .bp-xl { display: block; background: #0d6efd; }
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Indicador de breakpoint actual -->
+    <div class="info-breakpoint">
+        <strong>Tamaño de pantalla:</strong><br>
+        <div class="bp-indicator bp-xs">📱 XS - Extra Small (&lt;576px)</div>
+        <div class="bp-indicator bp-sm">📱 SM - Small (≥576px)</div>
+        <div class="bp-indicator bp-md">💻 MD - Medium (≥768px)</div>
+        <div class="bp-indicator bp-lg">💻 LG - Large (≥992px)</div>
+        <div class="bp-indicator bp-xl">🖥️ XL - Extra Large (≥1200px)</div>
+    </div>
+
+    <div class="container-fluid">
+        <h1 class="text-center mb-4">Ejemplo Didáctico: Bootstrap Grid Responsive</h1>
+        <p class="text-center mb-5">Redimensiona la ventana del navegador para ver cómo cambia el diseño</p>
+
+        <!-- EJEMPLO 1: Header que siempre ocupa todo el ancho -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="caja header">
+                    <strong>HEADER</strong>
+                    <div class="explicacion">
+                        <code>col-12</code> → Siempre ocupa las 12 columnas (100% del ancho)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EJEMPLO 2: Sidebar + Contenido principal (responsive) -->
+        <div class="row mb-4">
+            <!-- Sidebar: en móvil ocupa todo, en tablet+ ocupa 3 columnas -->
+            <div class="col-12 col-md-3">
+                <div class="caja sidebar">
+                    <strong>SIDEBAR</strong>
+                    <div class="explicacion">
+                        <code>col-12 col-md-3</code><br>
+                        📱 Móvil: 12 columnas (100%)<br>
+                        💻 Tablet+: 3 columnas (25%)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenido: en móvil ocupa todo, en tablet+ ocupa 9 columnas -->
+            <div class="col-12 col-md-9">
+                <div class="caja contenido">
+                    <strong>CONTENIDO PRINCIPAL</strong>
+                    <div class="explicacion">
+                        <code>col-12 col-md-9</code><br>
+                        📱 Móvil: 12 columnas (100%)<br>
+                        💻 Tablet+: 9 columnas (75%)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EJEMPLO 3: Tarjetas con diferentes layouts según tamaño -->
+        <h2 class="mt-5 mb-3">Galería de Tarjetas Responsive</h2>
+        <div class="row mb-4">
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="caja tarjeta">
+                    <strong>TARJETA 1</strong>
+                    <div class="explicacion">
+                        <code>col-12 col-sm-6 col-lg-3</code><br>
+                        📱 XS: 100% ancho<br>
+                        📱 SM: 50% ancho (2 por fila)<br>
+                        💻 LG: 25% ancho (4 por fila)
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="caja tarjeta">
+                    <strong>TARJETA 2</strong>
+                    <div class="explicacion">
+                        <code>col-12 col-sm-6 col-lg-3</code><br>
+                        📱 XS: 100% ancho<br>
+                        📱 SM: 50% ancho<br>
+                        💻 LG: 25% ancho
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="caja tarjeta">
+                    <strong>TARJETA 3</strong>
+                    <div class="explicacion">
+                        <code>col-12 col-sm-6 col-lg-3</code><br>
+                        📱 XS: 100% ancho<br>
+                        📱 SM: 50% ancho<br>
+                        💻 LG: 25% ancho
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="caja tarjeta">
+                    <strong>TARJETA 4</strong>
+                    <div class="explicacion">
+                        <code>col-12 col-sm-6 col-lg-3</code><br>
+                        📱 XS: 100% ancho<br>
+                        📱 SM: 50% ancho<br>
+                        💻 LG: 25% ancho
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EJEMPLO 4: Layout complejo con diferentes proporciones -->
+        <h2 class="mt-5 mb-3">Layout Complejo Multi-Breakpoint</h2>
+        <div class="row mb-4">
+            <div class="col-12 col-md-8 col-lg-9">
+                <div class="caja contenido">
+                    <strong>ÁREA PRINCIPAL</strong>
+                    <div class="explicacion">
+                        <code>col-12 col-md-8 col-lg-9</code><br>
+                        📱 XS/SM: 100% ancho<br>
+                        💻 MD: 66.6% ancho (8/12)<br>
+                        💻 LG+: 75% ancho (9/12)
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="caja sidebar">
+                    <strong>BARRA LATERAL</strong>
+                    <div class="explicacion">
+                        <code>col-12 col-md-4 col-lg-3</code><br>
+                        📱 XS/SM: 100% ancho<br>
+                        💻 MD: 33.3% ancho (4/12)<br>
+                        💻 LG+: 25% ancho (3/12)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EJEMPLO 5: Tres columnas con comportamiento diferente -->
+        <h2 class="mt-5 mb-3">Tres Columnas con Adaptación Progresiva</h2>
+        <div class="row mb-4">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                <div class="caja tarjeta">
+                    <strong>COLUMNA A</strong>
+                    <div class="explicacion">
+                        <code>col-12 col-md-6 col-lg-4</code><br>
+                        📱 XS/SM: 100%<br>
+                        💻 MD: 50% (2 por fila)<br>
+                        💻 LG: 33.3% (3 por fila)
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                <div class="caja tarjeta">
+                    <strong>COLUMNA B</strong>
+                    <div class="explicacion">
+                        <code>col-12 col-md-6 col-lg-4</code><br>
+                        📱 XS/SM: 100%<br>
+                        💻 MD: 50% (2 por fila)<br>
+                        💻 LG: 33.3% (3 por fila)
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                <div class="caja tarjeta">
+                    <strong>COLUMNA C</strong>
+                    <div class="explicacion">
+                        <code>col-12 col-md-6 col-lg-4</code><br>
+                        📱 XS/SM: 100%<br>
+                        💻 MD: 50% (2 por fila)<br>
+                        💻 LG: 33.3% (3 por fila)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EJEMPLO 6: Footer -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="caja footer">
+                    <strong>FOOTER</strong>
+                    <div class="explicacion">
+                        <code>col-12</code> → Siempre 100% del ancho
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de referencia -->
+        <div class="row mt-5 mb-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-dark text-white">
+                        <h3 class="mb-0">📊 Tabla de Referencia: Breakpoints de Bootstrap</h3>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Clase</th>
+                                    <th>Tamaño</th>
+                                    <th>Ancho de pantalla</th>
+                                    <th>Dispositivos típicos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>.col-</code></td>
+                                    <td>Extra Small (XS)</td>
+                                    <td>&lt; 576px</td>
+                                    <td>📱 Teléfonos móviles</td>
+                                </tr>
+                                <tr>
+                                    <td><code>.col-sm-</code></td>
+                                    <td>Small (SM)</td>
+                                    <td>≥ 576px</td>
+                                    <td>📱 Móviles grandes</td>
+                                </tr>
+                                <tr>
+                                    <td><code>.col-md-</code></td>
+                                    <td>Medium (MD)</td>
+                                    <td>≥ 768px</td>
+                                    <td>💻 Tablets</td>
+                                </tr>
+                                <tr>
+                                    <td><code>.col-lg-</code></td>
+                                    <td>Large (LG)</td>
+                                    <td>≥ 992px</td>
+                                    <td>💻 Portátiles</td>
+                                </tr>
+                                <tr>
+                                    <td><code>.col-xl-</code></td>
+                                    <td>Extra Large (XL)</td>
+                                    <td>≥ 1200px</td>
+                                    <td>🖥️ Monitores grandes</td>
+                                </tr>
+                                <tr>
+                                    <td><code>.col-xxl-</code></td>
+                                    <td>Extra Extra Large (XXL)</td>
+                                    <td>≥ 1400px</td>
+                                    <td>🖥️ Monitores muy grandes</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Consejos prácticos -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card border-info">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="mb-0">💡 Consejos Prácticos</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Mobile First:</strong> Empieza diseñando para móviles (<code>col-12</code>) y luego añade clases para pantallas más grandes.</li>
+                            <li><strong>Combina breakpoints:</strong> Puedes usar múltiples clases como <code>col-12 col-sm-6 col-md-4 col-lg-3</code> para controlar cada tamaño.</li>
+                            <li><strong>Sistema de 12 columnas:</strong> Cada fila tiene 12 columnas. Suma siempre 12 para que los elementos estén en la misma línea.</li>
+                            <li><strong>Orden visual:</strong> Usa <code>order-</code> para cambiar el orden en diferentes tamaños de pantalla.</li>
+                            <li><strong>Ocultar elementos:</strong> Usa <code>d-none d-md-block</code> para ocultar en móvil y mostrar en tablet+.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+

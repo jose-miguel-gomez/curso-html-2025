@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid</title>
+  <style>
+    .grid-container { /*definimos el contenedor grip (malla)*/
+      display: grid;
+      grid-template-columns: 1fr 2fr; /*Tendrá dos columnas, la primera de 1 fracción de la pantalla, la segunda de 2 fracciones (el doble de grande)*/
+      grid-template-rows: 100px 50px; /*Tendrá varias filas, la primera de 100px, la segunda de 50px, el resto de tamaño automático*/
+      gap: 10px; /*espacio de 10px entre filas y columnas*/
+      background-color: lightgray;
+    }
+    /*Definida nuestra malla, vamos a meter items dentro*/
+    .grid-item { /*Todos los items van a tener el siguiente estilo*/
+      background-color: lightcoral;
+      padding: 20px;
+      border: 1px solid black;
+    }
+
+    .grid-item1 {
+      grid-column: 1 / 3;  /* Abarca desde la línea-columna 1 hasta la 3 (columnas 1 y 2)*/
+    }
+
+    .grid-item2 {
+      grid-row: 1 / 3;  /* Abarca desde la línea-fila 1 hasta la 3 * (filas 1 y 2)*/
+    }
+  </style>
+</head>
+<body>
+    <h2>Ejemplo de CSS Grid</h2>
+  <div class="grid-container">
+    <div class="grid-item">Elemento 3</div>
+    <div class="grid-item grid-item1">Elemento 1</div>
+    <div class="grid-item grid-item2">Elemento 2</div>
+    <div class="grid-item">Elemento 4</div>
+    <div class="grid-item">Elemento 5</div>
+  </div>
+  <!--Observa la colocación de los items, los coloca en el orden escrito donde le decimos o, si no le decimos nada, en el primer "hueco libre"-->
+  <!--Modifica las posiciones de los elementos para verlo--> 
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🩸 Índice Maldito 🩸</title>
+
+  <style>
+    /* === Fondo Oscuro Sangriento === */
+    body {
+      background: radial-gradient(circle at top, #220000 0%, #000 80%);
+      color: #f1f1f1;
+      font-family: 'Creepster', 'Bebas Neue', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      overflow-x: hidden;
+    }
+
+    /* Fuente de terror */
+    @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Bebas+Neue&display=swap');
+
+    /* === Contenedor === */
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(20, 0, 0, 0.9);
+      border: 2px solid #a00000;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* === Efecto sangriento totalmente en CSS (manchas + goteos) === */
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      mix-blend-mode: multiply;
+      opacity: 0.14; /* controlar la intensidad general */
+      /* manchas (pequeñas y medianas) */
+      background-image:
+        radial-gradient(circle at 22% 8%, rgba(170,0,0,0.95) 0 8px, transparent 9px),
+        radial-gradient(circle at 40% 18%, rgba(150,0,0,0.95) 0 10px, transparent 11px),
+        radial-gradient(circle at 60% 6%, rgba(190,0,0,0.95) 0 6px, transparent 7px),
+        radial-gradient(circle at 80% 14%, rgba(160,0,0,0.95) 0 9px, transparent 10px);
+      background-repeat: no-repeat;
+    }
+
+    .container::after {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 12%;
+      width: 76%;
+      height: calc(100% - 16px);
+      pointer-events: none;
+      opacity: 0.12; /* controlar la intensidad general */
+      /* goteos largos verticales (dos capas para variar anchura/tono) */
+      background-image:
+        linear-gradient(to bottom, rgba(160,0,0,0.95) 0%, rgba(160,0,0,0.0) 45%),
+        linear-gradient(to bottom, rgba(200,20,20,0.9) 0%, rgba(200,20,20,0.0) 55%);
+      background-repeat: no-repeat, no-repeat;
+      background-position: 18% 0, 62% 0;           /* x position of each drip */
+      background-size: 6px 100%, 10px 100%;       /* width and full height for dripping */
+      filter: blur(0.6px);
+    }
+
+    /* === Título Principal === */
+    h1 {
+      text-align: center;
+      color: #ff0000;
+      font-size: 3rem;
+      text-shadow: 0 0 10px #ff0000, 0 0 25px #8b0000;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    /* Efecto goteo */
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      width: 120px;
+      height: 10px;
+      background: linear-gradient(to bottom, #ff0000, transparent);
+      border-radius: 50%;
+      transform: translateX(-50%);
+      animation: drip 2s infinite ease-in-out;
+    }
+
+    @keyframes drip {
+      0%, 100% { height: 10px; opacity: 0.7; }
+      50% { height: 25px; opacity: 1; }
+    }
+
+    /* === Subtítulos === */
+    h3 {
+      color: #ff4444;
+      border-left: 5px solid #a00000;
+      padding-left: 10px;
+      margin-top: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    h4 {
+      color: #ff6666;
+      text-shadow: 0 0 10px #700000;
+      margin-top: 1rem;
+    }
+
+    /* === Listas === */
+    ul { list-style: none; padding-left: 1rem; }
+    li { margin: 0.6rem 0; position: relative; }
+
+    li::before {
+      content: "🩸";
+      position: absolute;
+      left: -1.5rem;
+      color: #b00000;
+      animation: goteo 3s infinite;
+    }
+
+    @keyframes goteo {
+      0%, 100% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(5px); opacity: 0.6; }
+    }
+
+    /* === Enlaces === */
+    a {
+      color: #ff1a1a;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    a:hover {
+      color: #fff;
+      text-shadow: 0 0 15px #ff0000, 0 0 25px #ff3333;
+    }
+
+    ul ul {
+      border-left: 2px solid #550000;
+      margin-left: 1rem;
+      padding-left: 1rem;
+    }
+
+    /* === Pie de página === */
+    .footer {
+      text-align: center;
+      color: #880000;
+      margin-top: 2rem;
+      font-size: 1.1rem;
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 1px;
+    }
+    .footer::before { content: "🕯️"; margin-right: 8px; }
+
+    /* === Efecto Parpadeo === */
+    @keyframes parpadeo {
+      0%, 100% { opacity: 1; } 50% { opacity: 0.3; }
+    }
+    h1, .footer { animation: parpadeo 3s infinite; }
+
+    /* === Responsivo === */
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      .container { padding: 1.5rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>🩸 Índice Maldito 🩸</h1>
+
+<h3>Ejercicios</h3>
+    <ul> 
+      <li><h4>HTML</h4>
+        <ul>
+          <li><a href="ejercicio_1.html">Ejercicio 1:</a> Etiquetas básicas</li>
+          <li><a href="ejercicio_2.html">Ejercicio 2:</a> Listas</li>
+          <li><a href="ejercicio_3.html">Ejercicio 3:</a> Estructura básica</li>
+          <li><a href="ejercicio_4.html">Ejercicio 4:</a> Formularios</li>
+        </ul>
+      </li>
+
+        <li><h4>CSS</h4>
+            <ul>
+                <li> <a href="ejercicio_5.html">Ejercicio 5:</a> Introducción a CSS </li>
+                <li> <a href="ejercicio_6.html">Ejercicio 6:</a> Selectores CSS</li>
+                <li> <a href="ejercicio_7.html">Ejercicio 7:</a> Posicionamiento CSS </li>
+                <li> <a href="ejercicio_8.html">Ejercicio 8:</a> Igual que el anterior pero con CSS externo </li>
+            </ul>
+        </li>
+
+
+      <li><h4>Box Model</h4>
+        <ul>
+          <li><a href="ejercicio_9.html">Ejercicio 9:</a> Box Model (1)</li>
+          <li><a href="ejercicio_10.html">Ejercicio 10:</a> Box Model (2)</li>
+        </ul>
+      </li>
+
+      <li><h4>Flexbox Layout</h4>
+        <ul>
+          <li><a href="ejercicio_11.html">Ejercicio 11:</a> Flexbox Layout (1)</li>
+          <li><a href="ejercicio_12.html">Ejercicio 12:</a> Flexbox Layout (2)</li>
+        </ul>
+      </li>
+
+      <li><h4>Selectores CSS avanzados</h4>
+        <ul>
+          <li><a href="ejercicio_13.html">Ejercicio 13:</a> Selectores CSS avanzados</li>
+        </ul>
+      </li>
+
+      <li><h4>CSS Grid</h4>
+        <ul>
+          <li><a href="ejercicio_14.html">Ejercicio 14:</a> CSS Grid (1)</li>
+          <li><a href="ejercicio_15.html">Ejercicio 15:</a> CSS Grid (2)</li>
+          <li><a href="ejercicio_16.html">Ejercicio 16:</a> CSS Grid (3)</li>
+          <li><a href="ejercicio_17.html">Ejercicio 17:</a> CSS Grid (4)</li>
+          <li><a href="ejercicio_18.html">Ejercicio 18:</a> CSS Grid (5)</li>
+        </ul>
+      </li>
+
+      
+    </ul>
+
+    <div class="footer">⚰️ Fin del índice... ¿o no? ⚰️</div>
+  </div>
+</body>
+</html>
+

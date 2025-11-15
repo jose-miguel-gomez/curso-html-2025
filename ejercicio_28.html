@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Estructura básica de una web con Bootstrap">
+  <meta name="author" content="José Miguel Gómez">
+  <title>Web Básica con Bootstrap</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <!-- CSS propio -->
+  <link rel="stylesheet" type="text/css" href="css/css_ejemplo28.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Mi página web</h1>
+    <p class="lead">Ejemplo básico con CSS y Bootstrap</p>
+  </header>
+  
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <div class="navbar-brand">
+        <img src="img/bootstrap-logo.png" alt="Logo" width="60" height="50" class="d-inline-block align-text-center"> Menú de navegación
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="menu" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-1"><a class="btn btn-outline-danger" href="https://getbootstrap.com/" target="_blank" role="button">Bootstrap</a></p></li>
+          <li class="nav-item mx-1"><a class="btn btn-outline-success" href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank" role="button">Documentación</a></p></li>
+          <li class="nav-item mx-1"><a class="btn btn-outline-danger" href="https://getbootstrap.com/docs/5.3/examples/" target="_blank" role="button">Ejemplos</a></p></li>
+          <li class="nav-item mx-1"><a class="btn btn-outline-success" href="https://icons.getbootstrap.com/" target="_blank" role="button">Iconos</a></p></li>        
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+   <!-- MAIN -->
+  <main class="container-fluid my-4">
+    <div class="row">
+      <!-- Indice-->
+      <aside class="col-md-3 mb-3" id="indice">
+        <div class="accordion" id="indiceAccordion">
+          <!-- Sección 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header d-flex justify-content-between align-items-center">
+              <a href="#seccion1" class="accordion-link">Bootstrap</a>
+              <button class="accordion-button collapsed flex-shrink-0" type="button" data-bs-toggle="collapse" data-bs-target="#sub1" aria-expanded="false" aria-controls="sub1">
+              </button>
+            </h2>
+            <div id="sub1" class="accordion-collapse collapse" data-bs-parent="#indiceAccordion">
+              <div class="accordion-body p-0">
+                <div class="list-group list-group-flush">
+                  <a href="#sub11" class="list-group-item list-group-item-action ps-4">↳ Origen de Bootstrap</a>
+                  <a href="#sub12" class="list-group-item list-group-item-action ps-4">↳ Ventajas de usar Bootstrap</a>
+                  <a href="#sub13" class="list-group-item list-group-item-action ps-4">↳ Posibles inconvenientes</a>
+                  <a href="#sub14" class="list-group-item list-group-item-action ps-4">↳ Instalación</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sección 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header d-flex justify-content-between align-items-center">
+              <a href="#seccion2" class="accordion-link">Componentes Bootstrap</a>
+              <button class="accordion-button collapsed flex-shrink-0" type="button" data-bs-toggle="collapse" data-bs-target="#sub2" aria-expanded="false" aria-controls="sub2">
+              </button>
+            </h2>
+            <div id="sub2" class="accordion-collapse collapse" data-bs-parent="#indiceAccordion">
+              <div class="accordion-body p-0">
+                <div class="list-group list-group-flush">
+                  <a href="#sub21" class="list-group-item list-group-item-action ps-4">↳ Carrusel</a>
+                  <a href="#sub22" class="list-group-item list-group-item-action ps-4">↳ Tarjetas</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sección 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header d-flex justify-content-between align-items-center">
+              <a href="#seccion3" class="accordion-link">Plantillas</a>
+            </h2>
+          </div>
+
+          <!-- Sección 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header d-flex justify-content-between align-items-center">
+              <a href="#seccion4" class="accordion-link">Alternativas a Bootstrap</a>
+              <button class="accordion-button collapsed flex-shrink-0" type="button" data-bs-toggle="collapse" data-bs-target="#sub4" aria-expanded="false" aria-controls="sub4">
+              </button>
+            </h2>
+            <div id="sub4" class="accordion-collapse collapse" data-bs-parent="#indiceAccordion">
+              <div class="accordion-body p-0">
+                <div class="list-group list-group-flush">
+                  <a href="#sub41" class="list-group-item list-group-item-action ps-4">↳ Foundation</a>
+                  <a href="#sub42" class="list-group-item list-group-item-action ps-4">↳ Bulma</a>
+                  <a href="#sub43" class="list-group-item list-group-item-action ps-4">↳ Tailwind CSS</a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Contenido principal -->
+      <section class="col-md-9" id="contenido">
+        <article>
+          <h2 id="seccion1">Bootstrap</h2>
+          <p>Bootstrap es un framework (kit de herramientas) gratuito y de código abierto, creado para facilitar el proceso de diseño y desarrollo de sitios web responsivos de una forma rápida y sencilla. </p>
+          <p>En otras palabras, Bootstrap ayuda a los desarrolladores a construir sitios web más rápidamente, proporcionando un conjunto de componentes y plantillas CSS, HTML y JavaScript que cualquiera puede utilizar o modificar.</p>
+          <div>
+            <h3 id="sub11"> Origen de Bootstrap</h3>
+            <p>El origen de Bootstrap lo encontramos en las oficinas de Twitter, donde Mark Otto y Jacob Thornton lanzaron la primera versión en agosto de 2011 bajo el nombre Twitter Blueprint.</p>
+            <p>Inicialmente, fue una herramienta interna que permitía que el diseño de esta popular red social fuera coherente y consistente. Sin embargo, meses más tarde, Twitter liberó el código y el framework en GitHub y lo renombró como Bootstrap.</p>
+            <p>Actualmente, Bootstrap se encuentra en su quinta versión y se ha convertido en uno de los frameworks de desarrollo más populares (aunque no es la única que existe).</p>
+          </div>
+          <div>
+            <h3 id="sub12">Ventajas de usar Bootstrap</h3>
+            <p>Entre las muchas ventajas que obtenemos al implementar Bootstrap en nuestros proyecyos Web, podemos destacar las siguientes:</p>
+            <ol>
+             <li><p><p>Facilidad de uso: Bootstrap es fácil de aprender. Sus archivos están compilados para facilitar el acceso y sólo se requieren conocimientos básicos de HTML, CSS y JS para modificarlos. Además, debido a su popularidad, hay un montón de tutoriales y foros en línea para ayudarte a empezar.</p></p></li>
+             <li><p>Desarrollo estable: Bootstrap es un framework maduro, lo que nos aporta una gran estabilidad. Además, está soportado por una comunidad amplia, por lo que, constantemente se publican actualizaciones con mejoras.</p></li>
+             <li><p>Desarrollo ágil y personalizado: Bootstrap ofrece un conjunto de componentes predefinidos y estilos CSS que permiten desarrollar sitios web de manera rápida. Además, todas estas componentes y estilos son altamente personalizables, puedes modificar el aspecto de los elementos o incluso sobrescribir reglas de estilo según tus necesidades específicas.</p></li>
+             <li><p>Compatibilidad con navegadores: es compatible con la mayoría de navegadores del mercado, desde Chrome o Firefox, hasta Opera, Safari o Microsoft Edge.</p></li>
+             <li><p>Rejilla (Grid) responsive: Bootstrap facilita la propia composición de la página web mediante un sistema de rejilla responsive predefinido. De este modo, Bootstrap facilita la creación de sitios web responsive que se adaptan automáticamente a diferentes tamaños de pantalla, lo que mejora la experiencia del usuario de tablets y otros dispositivos móviles.</p></li>
+             <li><p>Diseño responsive y adaptable: Como hemos dicho antes, los componentes de Bootstrap son perfectamente adaptables a todo tipo de dispositivos y ordenadores de escritorio, por lo que conseguimos implementar sitios responsive con bastante facilidad.</p></li>
+             <li><p> Sistema de imágenes responsive: proporciona un sistema de redimensionamiento de imágenes, las cuales se adaptan al tamaño correcto de forma automática.</p></li>
+             <li><p>  Documentación: la documentación de Bootstrap es clara, está bien estructurada y ofrece muchos ejemplos, algo que facilita su aprendizaje y ahorra mucho tiempo a los desarrolladores. Incluso puedes copiar y modificar los ejemplos de código para tus proyectos, ahorrando tiempo de tener que codificar desde cero.</p></li>
+             <li><p>  Comunidad: debido a su popularidad, se ha construido una gran comunidad alrededor de Bootstrap que siempre está dispuesta a ayudar, resolver errores y sugerir mejoras. Igualmente, será fácil encontrar cursos o artículos donde explican su funcionamiento en detalle.</p></li>
+            </ol>        
+           </div>
+          <div>
+            <h3 id="sub13">Posibles inconvenientes</h3>
+            <p>A pesar de ser una herramienta popular y que ha demostrado resultar muy versátil, Bootstrap no está exento de posibles inconvenientes.</p>
+            <p>Por ejemplo, el hecho de tener un gran número de funcionalidades implica que los archivos son de gran tamaño. El uso de Bootstrap en tu proyecto puede ralentizar el tiempo de carga del sitio web y sobrecargar tu servidor. Por ello, desde Bootstrap 4 ya se incluye la opción de personalizar la descarga para incluir solo los componentes necesarios, lo que ayuda a reducir el tamaño.</p>
+            <p>Otro problema que puede conllevar el uso de Bootstrap es, precisamente, su popularidad. Bootstrap tiene un estilo visual muy consistente y, al estar tan extendido su uso, algunos sitios web pueden acabar pareciendo similares, ya que utilizan los mismos estilos, componentes, estructura y diseño. Para evitar este inconveniente, lo mejor que puedes hacer es currarte un poco la personalización de los elementos de Bootstrap o combinarlo con otros estilos.</p>
+            <p>Por otro lado, aunque Bootstrap es compatible con la última versión de los navegadores más populares, no ocurre lo mismo con las versiones más antiguas. Esto significa que el aspecto de tu sitio web dependerá totalmente de la voluntad de los usuarios de actualizar sus navegadores.</p>
+            <p>Finalmente, aunque Bootstrap es fácil de usar, tiene una pequeña curva de aprendizaje al principio. Se necesita tiempo para aprender las clases y componentes disponibles, especialmente si vas a querer gestionar los aspectos más avanzados.</p>
+          </div>
+          <div>
+            <h3 id="sub14">Instalación</h3>
+            <p>Existen varias formas de instalar e implementar Bootstrap en nuestro proyecto Web.</p>
+            <p>Por ejemplo, podemos descargar los archivos necesarios desde su <a href="https://getbootstrap.com/docs/5.3/getting-started/download/" target="_blank">página web oficial</a>. Una vez que se han descargado los archivos CSS y JS, deberás descomprimirlos e incluirlos en la carpeta de tu proyecto. Recuerda que, para habilitarlos, deberás referenciarlos dentro de tu código HTML. </p>
+            <p>Otra manera, especialmente cómoda para empezar, consiste en incluir los archivos necesarios a partir de un <a href="https://getbootstrap.com/docs/5.3/getting-started/download/#cdn-via-jsdelivr" target="_blank">CDN</a> (Content Delivery Network). Esta es la manera que hemos usado en nuestros ejemplos.</p>
+          </div>
+        </article>
+
+        <article>
+          <h2 id="seccion2">Componentes Bootstrap</h2>
+          <p>Como ya hemos dicho, Bootstrap dispone de numerosos componentes personalizables que nos pueden ayudar en el desarrollo de nuestro proyecto Web.</p>
+          <p>Varias de estas componentes se han utilizado en la implementación de esta Web. Por ejemplo, hemos utilizado una barra de navegación (navbar), varios botones (button), el componente acordeón (accordion) en el índice de contenidos, etc.</p>
+          <p>A continuación vamos a mostrar mediante ejemplos concretos, otras dos componentes muy útiles: Carrusel y Tarjetas.</p>
+          <div>
+            <h3 id="sub21">Carrusel</h3>
+            <p>Un carrusel (carousel) es como una presentación de diapositivas, creada con transformaciones CSS 3D y un poco de JavaScript, que permite recorrer una serie de contenidos de manera secuencial.</p>
+
+            <!-- Carrusel dentro de una tarjeta -->
+            <div class="card mb-3" style="width: 75%; margin: auto; border: 6px double red">
+                <div class="card-header" style="text-align: center;background-color: greenyellow;">
+                    <h4>Ejemplo de carrusel: Mis perros</h4>
+                </div>
+                <div class="card-body" style="background-color: #f8f9fa;">
+
+                    <!-- CARRUSEL -->
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Indicadores-->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9"></button>
+                        </div>
+                        <!-- Diapositivas -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/carrusel/tropi1.jpg" class="d-block w-100" alt="Tropi">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h4>Tropi</h4>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="img/carrusel/tropi2.jpg" class="d-block w-100" alt="Tropi">
+                                 <div class="carousel-caption d-none d-md-block">
+                                    <h4>Tropi</h4>
+                                 </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="img/carrusel/chuki1.jpg" class="d-block w-100" alt="Chuky">
+                                 <div class="carousel-caption d-none d-md-block">
+                                    <h4>Chuky</h4>
+                                 </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="img/carrusel/chuki2.jpg" class="d-block w-100" alt="Chuky">
+                                 <div class="carousel-caption d-none d-md-block">
+                                    <h4>Chuky</h4>
+                                 </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="img/carrusel/jordan1.jpg" class="d-block w-100" alt="Jordan">
+                                 <div class="carousel-caption d-none d-md-block">
+                                    <h4>Jordan</h4>
+                                 </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="img/carrusel/jordan2.jpg" class="d-block w-100" alt="Jordan">
+                                 <div class="carousel-caption d-none d-md-block">
+                                    <h4>Jordan</h4>
+                                 </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="img/carrusel/tadeo1.jpg" class="d-block w-100" alt="Tadeo">
+                                 <div class="carousel-caption d-none d-md-block">
+                                    <h4>Tadeo</h4>
+                                 </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="img/carrusel/tadeo2.jpg" class="d-block w-100" alt="Tadeo">
+                                 <div class="carousel-caption d-none d-md-block">
+                                    <h4>Tadeo</h4>
+                                 </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="img/carrusel/casio1.jpg" class="d-block w-100" alt="Casio">
+                                 <div class="carousel-caption d-none d-md-block">
+                                    <h4>Casio</h4>
+                                 </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="img/carrusel/casio2.jpg" class="d-block w-100" alt="Casio">
+                                 <div class="carousel-caption d-none d-md-block">
+                                    <h4>Casio</h4>
+                                 </div>
+                            </div>
+                            
+                        </div>
+                        <!-- Controladores izq-der -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                             <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div>
+            <h3 id="sub22">Tarjetas</h3>
+            <p>Las tarjetas (Cards) de Bootstrap proporcionan un contenedor de contenido flexible y extensible con múltiples variantes y opciones. Por ejemplo, incluyen opciones para encabezados y pies de página, una amplia variedad de contenido, colores de fondo y potentes opciones de visualización.</p>
+            <p>Ya hemos usado esta componente en este ejemplo (el carrusel anterior se ha enmarcado dentro de una tarjeta) y en el <a href="ejercicio_27.html" target="_blank">ejemplo anterior</a>, pero a continuación mostramos otro ejemplo más del uso de estas tarjetas.</p>
+
+            <!-- Tarjeta principal -->
+            <div class="card mb-3" style="width: 75%; margin: auto; border: 6px double red">
+                <!-- Encabezado principal -->
+                <div class="card-header" style="text-align: center;background-color: green;">
+                    <h4>Mis perros</h4>
+                </div>
+                <!-- Cuerpo principal -->
+                <div class="card-body" style="background-color: #f8f9fa;">
+                <!-- Vamosa hacer un grid con 1 fila que contenga 6 tarjetas en varias columnas (3, 2 o 1 dependiendo del anchodel viewport) -->
+                <div class="row g-3">
+                    <!-- TARJETA INTERNA (repetida 6 veces) -->
+                    <div class="col-md-12 col-lg-6 col-xl-4">
+                        <div class="card h-100">
+                        <div class="card-header text-center fw-bold" style="background-color: aqua;">Tarjeta 1</div>
+                        <div class="card-body text-center" style="background-color: azure;">
+                            <img src="img/tarjeta/1.jpg" class="img-fluid rounded mb-2" alt="Tropi y Chuky">
+                           
+                        </div>
+                        <div class="card-footer text-center" style="background-color: aquamarine;">Tropi y Chuky</div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 col-xl-4">
+                        <div class="card h-100">
+                        <div class="card-header text-center fw-bold" style="background-color: antiquewhite;">Tarjeta 2</div>
+                        <div class="card-body text-center" style="background-color: beige;">
+                            <img src="img/tarjeta/2.jpg" class="img-fluid rounded mb-2" alt="Tropi y Chuky">
+                          
+                        </div>
+                        <div class="card-footer text-center" style="background-color: burlywood;">Tropi y Chuky</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-lg-6 col-xl-4">
+                        <div class="card h-100">
+                        <div class="card-header text-center fw-bold" style="background-color: cadetblue;">Tarjeta 3</div>
+                        <div class="card-body text-center" style="background-color: cyan;">
+                            <img src="img/tarjeta/3.jpg" class="img-fluid rounded mb-2" alt="Jordan y Tadeo">
+                         
+                        </div>
+                        <div class="card-footer text-center" style="background-color: cornflowerblue;">Jordan y Tadeo</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-lg-6 col-xl-4">
+                        <div class="card h-100">
+                        <div class="card-header text-center fw-bold" style="background-color: tomato;">Tarjeta 4</div>
+                        <div class="card-body text-center" style="background-color: sandybrown;">
+                            <img src="img/tarjeta/4.jpg" class="img-fluid rounded mb-2" alt="Jordan y Tadeo">
+                            
+                        </div>
+                        <div class="card-footer text-center" style="background-color: sienna;">Jordan y Tadeo</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-lg-6 col-xl-4">
+                        <div class="card h-100">
+                        <div class="card-header text-center fw-bold" style="background-color: salmon;">Tarjeta 5</div>
+                        <div class="card-body text-center" style="background-color: pink;">
+                            <img src="img/tarjeta/5.jpg" class="img-fluid rounded mb-2" alt="Jordan, Tadeo y Oreo">
+                          
+                        </div>
+                        <div class="card-footer text-center" style="background-color: orchid">Jordan, Tadeo y Oreo</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-lg-6 col-xl-4">
+                        <div class="card h-100">
+                        <div class="card-header text-center fw-bold" style="background-color: paleturquoise">Tarjeta 6</div>
+                        <div class="card-body text-center" style="background-color: papayawhip">
+                            <img src="img/tarjeta/5.jpg" class="img-fluid rounded mb-2" alt="Tadeo y Casio">
+                           
+                        </div>
+                        <div class="card-footer text-center" style="background-color: slategrey">Tadeo y Casio</div>
+                        </div>
+                    </div>
+
+
+
+                   </div>
+                </div>
+                <!-- Pie principal -->
+                <div class="card-footer text-center fw-bold" style="background-color: green">&copy; 2025 José Miguel Gómez</div>
+            </div>
+        </div>
+
+        </article>
+
+        <article>
+          <h2 id="seccion3">Plantillas</h2>
+          <p>Las plantillas de Bootstrap son estructuras y diseños predefinidos de sitios web que usan el framework Bootstrap para facilitar el desarrollo de páginas web responsives y rápidas. Estas plantillas incluyen elementos de diseño como botones, formularios y tipografía, además de estilos CSS, HTML y JavaScript, que se pueden personalizar para crear sitios web de manera más eficiente.</p>
+          <p>Existen numerosas Web donde se pueden descargar plantillas Bootstrap (cuidado, algunas cobran por descargar sus plantillas), aquí vamos a enlazar solo dos:</p>
+          <ul>
+             <li><p><a href="https://github.com/awesome-bootstrap-org/awesome-bootstrap?tab=readme-ov-file#single-page-templates" target="_blank">Awesome Bootstrap</a></p></li>
+             <li><p><a href="https://startbootstrap.com/themes?showPro=false" target="_blank">Start Bootstrap</a></p></li>    
+            </ul>        
+
+
+          <p>Como ejemplo del uso de estas plantillas, podemos visitar la Web implementada pornuestro profesor para presentar de su <a href="https://thesis-dlumbrer.gitlab.io/" target="_blank">Tesís Doctoral.</a></p>
+        </article>
+
+        <article>
+
+          <h2 id="seccion4">Alternativas a Bootstrap</h2>
+          <p>Aunque Bootstrap es uno de los framework más conocido y extendido, existen otros muchos frameworks que podemos usar para diseñar nuestos proyectos Web.</p>
+          <p>Vamos a finalizar este trabajo citando y analizando brevemente tres de las alternativas más conocidas. En el siguiente <a href="https://github.com/troxler/awesome-css-frameworks?tab=readme-ov-file#general-purpose" target="_blank">enlace</a> puedes encontrar estas y otras muchas opciones alternativas al uso de Bootstrap.</p>
+          <div>
+            <h3 id="sub41">Foundation</h3>
+            <p><a href="https://get.foundation/index.html" target="_blank">Foundation</a> es una biblioteca de código abierto semejante a Bootstrap, aunque tienen enfoques y características diferentes.</p>
+            <p>Foundation ofrece mayor flexibilidad y personalización avanzada, siendo ideal para proyectos que requieren diseños únicos y detallados. Está completamente basado en Sass (lenguaje de hoja de estilos en cascada), lo que facilita la personalización.</p>
+            <p>Bootstrap, por otro lado, es más estructurado y proporciona un conjunto de estilos predefinidos que facilitan el desarrollo rápido, aunque puede ser menos adaptable a diseños personalizados sin sobrescribir CSS. Bootstrap es más popular y tiene una comunidad más grande, lo que facilita encontrar recursos y soporte.</p> 
+         </div>
+          <div>
+            <h3 id="sub42">Bulma</h3>
+            <p><a href="https://bulma.io/" target="_blank">Bulma</a> es otra biblioteca de código abierto, basada en el modelo FlexBox y que usa CSS puro, sin depender de JavaScript.</p>
+            <p>Bulma es secilla de aprender y utilizar, tiene un diseño limpio, responsivo y modular (componentes predefinidos, como botones, formularios, tarjetas, menús de navegación, ...). Además, su independencia de JS la hace ligera y fácil de integrar.</p>
+            <p>Bootstrap, además de Flexbox, ofrece otras otras técnicas de diseño, entre ellos JS, lo que proporciona más funcionalidades. Por contra, la dependencia de JS para muchos de sus componentes, provoca una mayor complejidad y peso.</p> 
+          </div>
+          <div>
+            <h3 id="sub43">Tailwind CSS</h3>
+            <p><a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a> es una biblioteca de utilidades CSS (no depende de JS) de bajo nivel, que permite a los desarrolladores crear rápidamente interfaces de usuario personalizadas sin tener que escribir CSS personalizado desde cero.</p>
+            <p>Tailwind CSS es más flexible y adecuado para proyectos que requieren un diseño único y altamente personalizable, mientras que Bootstrap es ideal para proyectos que buscan una implementación rápida y consistente de componentes estándar.</p>
+          </div>
+        </article>
+
+      </section>
+    </div>
+  </main>
+  
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-3 mt-auto">
+    <p>&copy; 2025 José Miguel Gómez - Mi Web. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
+

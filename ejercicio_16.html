@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .dashboard {
+            display: grid;
+            grid-template-columns: 200px 250px 180px 150px;
+            grid-template-rows: 80px 150px 120px 100px;
+            column-gap: 25px;
+            /* hueco horizontal 25px*/
+            row-gap: 10px;
+            /* hueco vertical 10px */
+            border: 2px solid #222;
+            padding: 10px;
+            background: #f5f5f5;
+        }
+
+        .panel {
+            background: #cfe2ff;
+            border: 2px solid #6c8bc7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        /* Panel principal superior */
+        .header {
+            grid-column: 1 / span 4;
+            grid-row: 1 / 2;
+            background: #ffd966;
+        }
+
+        /* Panel lateral grande */
+        .sidebar {
+            grid-column: 1 / 2;
+            grid-row: 2 / span 4;
+            background: #d9ead3;
+        }
+
+        /* Panel de estadísticas */
+        .stats {
+            grid-column: 2 / span 2;
+            grid-row: 2 / span 2;
+            background: #f9cb9c;
+        }
+
+        /* Panel pequeño a la derecha */
+        .info {
+            grid-column: 4 / 5;
+            grid-row: 2 / 4;
+            background: #b6d7a8;
+        }
+
+        /* Panel inferior ancho */
+        .footer {
+            grid-column: 2 / span 3;
+            grid-row: 4 / span 1;
+            background: #a4c2f4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Dashboard con columnas y filas irregulares</h2>
+    <div class="dashboard">
+        <div class="panel header">Header</div>
+        <div class="panel sidebar">Sidebar</div>
+        <div class="panel stats">Stats</div>
+        <div class="panel info">Info</div>
+        <div class="panel footer">Footer</div>
+    </div>
+
+</body>
+
+</html>

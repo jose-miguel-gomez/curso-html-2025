@@ -1,72 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Box Model</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio Práctico 3: Box Model</title>
+  <style>
+    /* Estilo para el contenedor principal */
+    .contenedor {
+      width: 80%;  /* Ancho del contenedor */
+      margin: 20px auto;  /* Margen superior e inferior de 20px, centrado horizontalmente */
+      padding: 10px;  /* Relleno de 10px */
+      border: 2px solid #333;  /* Borde sólido de 2px de color gris oscuro */
+      background-color: #f9f9f9;  /* Color de fondo */
+    }
 
-    <meta name="description" content="Box Model">
-    <meta name="author" content="José Miguel Gómez">
+    /* Estilo para los párrafos */
+    p {
+      margin: 15px 0;  /* Margen superior e inferior de 15px */
+      padding: 10px;  /* Relleno de 10px */
+      border: 1px solid #666;  /* Borde sólido de 1px de color gris */
+      background-color: #e9e9e9;  /* Color de fondo */
+    }
 
-    <link rel="stylesheet" type="text/css" href="css/css_ejemplo9.css">
-
+    /* Estilo para los encabezados */
+    h1, h2 {
+      margin: 20px 0;  /* Margen superior e inferior de 20px */
+      padding: 15px;  /* Relleno de 15px */
+      border: 1px solid #000;  /* Borde sólido de 1px de color negro */
+      background-color: #d9d9d9;  /* Color de fondo */
+    }
+  </style>
 </head>
-
 <body>
-   <div class="global">
-      <div class="cabecera">
-        Box Model<br>(Unidimensional)
-      </div>
-      
-      <div class="principal"> 
-        
-           <div class="navegacion">
-                <h3>Índice de contenidos</h3>
-                <ul>
-                    <li>Sección 1
-                        <ul>
-                            <li>Sección 1.1</li>
-                            <li>Sección 1.2</li>
-                         </ul>
-                    </li>
-                    <li>Sección 2
-                        <ul>
-                            <li>Sección 2.1</li>
-                            <li>Sección 2.2</li>
-                            <li>Sección 2.3</li>
-                        </ul>
-                    </li>
-                    <li>Sección 3</li>
-                </ul>  
-           </div>
-
-           <div class="contenido">
-               <div class="contenido1">
-                <h2>CONTENIDO 1</h2>
-                <p>Contenido de esta sección</p>
-               </div>  
-
-               <div class="contenido2">
-                   <div class="contenido2_1">
-                    <h2>CONTENIDO 2.1</h2>
-                     <p>Contenido de esta sección</p>
-                   </div>
-                   <div class="contenido2_2">
-                    <h2>CONTENIDO 2.2</h2>
-                     <p>Contenido de esta sección</p>
-                   </div>
-               </div>
-    
-               <div class="contenido3">
-                <h2>CONTENIDO 3</h2>
-                <p>Contenido de esta sección</p>
-               </div>    
-           </div>
-      </div>
-
-      <div class="pie">
-        © 2025 José Miguel Gómez
-      </div>
-   </div>
+  <div class="contenedor">
+    <h1>Aplicando el Box Model en CSS</h1>
+    <p>Este es un párrafo con margen, relleno, borde y color de fondo aplicados utilizando el modelo de caja.</p>
+    <h2>Subtítulo con Box Model</h2>
+    <p>Otro párrafo con estilos aplicados. Los márgenes y el relleno ayudan a separar el contenido y mejorar la presentación visual.</p>
+  </div>
 </body>
 </html>

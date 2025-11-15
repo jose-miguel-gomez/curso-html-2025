@@ -1,61 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejemplos de Selectores Avanzados</title>
-  <style>
-    /* Selector Descendiente */
-    div p {
-      color: blue;  /* Todos los <p> dentro de <div> serán azules */
-    }
-    
-    /* Selector Hijo */
-    ul > li {
-      color: green;  /* Todos los <li> hijos directos de <ul> serán verdes */
-    }
-    
-    /* Selector de Hermano Adyacente */
-    h1 + p {
-      color: red;  /* El primer <p> inmediatamente después de <h1> será rojo */
-    }
-    
-    /* Selector de Hermanos Generales */
-    h1 ~ p {
-      color: orange;  /* Todos los <p> precedidos por <h1> serán naranjas */
-    }
-    
-    /* Selector de Atributos */
-    input[type="text"] {
-      border: 5px solid black;  /* Todos los <input> de tipo texto tendrán un borde negro */
-    }
-    
-    /* Selector de Pseudo-clase: nth-child */
-    li:nth-child(2) {
-      color: purple;  /* El segundo <li> en cada <ul> será púrpura */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <link rel="stylesheet" type="text/css" href="css/css_ejemplo11.css">
 </head>
+
 <body>
-  <div>
-    <p>Este es un párrafo dentro de un div.</p>
-    <p>Otro párrafo dentro de un div.</p>
-  </div>
-  <ul>
-    <li>Elemento de lista 1</li>
-    <li>Elemento de lista 2</li>
-    <li>Elemento de lista 3</li>
-  </ul>
-  <h1>Encabezado 1</h1>
-  <p>Este párrafo sigue al encabezado 1 y es rojo. (?)</p>
-  <p>Este párrafo sigue al encabezado 1 y es naranja.</p>
-  <input type="text" placeholder="Texto">
-  <input type="password" placeholder="Contraseña">
-  <ul>
-    <li>Elemento de lista 1</li>
-    <li>Elemento de lista 2 (púrpura)</li>
-    <li>Elemento de lista 3</li>
-  </ul>
+ 
+    <div class="contenedor">
+        <div class="titulo"><h1>Título<br>FlexBox</h1></div>
+        <div class="caja1">
+                <div class="caja2"> <p style="color:rgb(2, 82, 28)">Caja 1</p> </div>
+                <div class="caja2"> <p style="color: rgb(250, 8, 141); background-color: #a5fd03;">Caja 2</p> </div>
+                <div class="caja2"> <p>Caja 3 </div>
+        </div>
+        <div class="caja3">Píe de la caja</div>
+    </div>
+
 </body>
+
 </html>
 

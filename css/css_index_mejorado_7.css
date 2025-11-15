@@ -1,0 +1,107 @@
+
+    /* === Fondo de pergamino === */
+    body {
+      background: url('https://www.transparenttextures.com/patterns/aged-paper.png');
+      background-color: #f8f1d4;
+      font-family: 'Garamond', 'Times New Roman', serif;
+      color: #3b2f2f;
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.7;
+    }
+
+    /* === Contenedor tipo pergamino === */
+    .container {
+      background: rgba(255, 248, 220, 0.95);
+      border: 6px double #8b5a2b;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* === Encabezados con estilo medieval === */
+    h1, h3, h4 {
+      text-align: center;
+      color: #4b2e05;
+      font-family: 'UnifrakturCook', 'Old English Text MT', cursive;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      border-bottom: 3px solid #8b5a2b;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      color: #5a381e;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+      color: #4b2e05;
+      text-align: left;
+      margin-top: 1rem;
+      border-bottom: 1px solid #c8a165;
+      display: inline-block;
+    }
+
+    /* === Listas === */
+    ul {
+      list-style-type: none;
+      padding-left: 1rem;
+    }
+
+    li {
+      margin: 0.5rem 0;
+      position: relative;
+    }
+
+    /* Adorno antes de cada ítem */
+    li::before {
+      content: "✦";
+      color: #8b5a2b;
+      margin-right: 8px;
+    }
+
+    /* === Enlaces tipo manuscrito === */
+    a {
+      color: #5a381e;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    a:hover {
+      color: #b97a3d;
+      text-shadow: 0 0 5px #c8a165;
+    }
+
+    /* === Sublistas con borde decorativo === */
+    ul ul {
+      border-left: 2px dotted #8b5a2b;
+      margin-left: 1rem;
+      padding-left: 1rem;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+      .container {
+        padding: 1.2rem;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* === Fuente decorativa (Google Fonts) === */
+    @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+

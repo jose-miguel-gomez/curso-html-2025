@@ -1,83 +1,169 @@
-/* Fuentes futuristas */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-body {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: 'Orbitron', sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
+    /* === Fondo y estética general === */
+    body {
+      background: radial-gradient(circle at 20% 20%, #0f0c29, #302b63, #24243e);
+      font-family: 'Orbitron', sans-serif;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-/* Estilo del encabezado */
-header {
-    background: linear-gradient(90deg, #ff00c8, #00eaff);
-    color: #0a0a0f;
-    padding: 20px;
-    box-shadow: 0 0 20px #00eaff;
-}
+    /* === Contenedor principal tipo holograma === */
+    .container {
+      background: rgba(20, 20, 40, 0.7);
+      border: 2px solid #0ff;
+      border-radius: 20px;
+      box-shadow: 0 0 25px #0ff, inset 0 0 10px #f0f;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
 
-h1 {
-    font-size: 3rem;
-    text-shadow: 0 0 10px #ff00c8, 0 0 20px #00eaff;
-    letter-spacing: 3px;
-}
+    /* Líneas decorativas “holográficas” */
+    .container::before, .container::after {
+      content: "";
+      position: absolute;
+      width: 120%;
+      height: 2px;
+      top: 0;
+      left: -10%;
+      background: linear-gradient(90deg, transparent, #0ff, #f0f, transparent);
+      animation: scan 5s linear infinite;
+      opacity: 0.4;
+    }
+    .container::after {
+      top: auto;
+      bottom: 0;
+      animation-delay: 2.5s;
+    }
 
-/* Estilo de los enlaces */
-a {
-    color: #00eaff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    display: inline-block;
-    margin: 10px 0;
-    position: relative;
-    transition: all 0.3s ease;
-}
+    @keyframes scan {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
 
-a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #ff00c8;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
+    /* === Encabezado principal === */
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
+      margin-bottom: 1.5rem;
+      letter-spacing: 2px;
+    }
 
-a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
+    h3 {
+      color: #f0f;
+      border-left: 4px solid #0ff;
+      padding-left: 10px;
+      margin-top: 2rem;
+      text-transform: uppercase;
+    }
 
-a:hover {
-    color: #ff00c8;
-    text-shadow: 0 0 15px #ff00c8, 0 0 30px #00eaff;
-}
+    h4 {
+      color: #0ff;
+      text-shadow: 0 0 5px #0ff;
+      margin-top: 1rem;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+    }
 
-/* Estilo para los párrafos */
-p {
-    font-size: 1.2rem;
-    margin: 20px 0;
-    color: #b0b0ff;
-}
+    /* === Listas y elementos === */
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
 
-main {
-    padding: 50px;
-}
+    li {
+      margin: 0.5rem 0;
+      position: relative;
+      font-size: 0.95rem;
+    }
 
-/* Efecto de parpadeo en los enlaces */
-@keyframes flicker {
-    0% { text-shadow: 0 0 5px #ff00c8, 0 0 10px #ff00c8, 0 0 15px #ff00c8; }
-    50% { text-shadow: 0 0 10px #00eaff, 0 0 20px #ff00c8, 0 0 30px #ff00c8; }
-    100% { text-shadow: 0 0 5px #ff00c8, 0 0 10px #00eaff, 0 0 20px #ff00c8; }
-}
+    /* Icono de neón antes de cada elemento */
+    li::before {
+      content: "⟡";
+      color: #f0f;
+      text-shadow: 0 0 10px #f0f;
+      margin-right: 8px;
+    }
 
-a {
-    animation: flicker 1.5s infinite alternate;
-}
+    /* === Enlaces estilo neón === */
+    a {
+      color: #0ff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
 
+    a:hover {
+      color: #f0f;
+      text-shadow: 0 0 10px #f0f, 0 0 20px #0ff;
+      letter-spacing: 1px;
+    }
+
+    /* Sublistas */
+    ul ul {
+      border-left: 2px solid rgba(0, 255, 255, 0.3);
+      margin-left: 1rem;
+      padding-left: 1rem;
+    }
+
+    /* === Pie de página tipo glitch === */
+    .footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: #888;
+      font-family: monospace;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      text-shadow: 0 0 5px #0ff;
+    }
+
+    /* Efecto de texto “glitch” */
+    .glitch {
+      position: relative;
+      display: inline-block;
+      color: #0ff;
+    }
+    .glitch::before, .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      color: #f0f;
+      opacity: 0.7;
+      clip: rect(0, 0, 0, 0);
+      animation: glitch 2s infinite;
+    }
+    .glitch::after {
+      color: #0ff;
+      animation-delay: 1s;
+    }
+
+    @keyframes glitch {
+      0% { clip: rect(0, 900px, 0, 0); transform: translate(0); }
+      10% { clip: rect(10px, 9999px, 85px, 0); transform: translate(-3px, -2px); }
+      20% { clip: rect(85px, 9999px, 140px, 0); transform: translate(3px, 2px); }
+      30%, 100% { clip: rect(0, 0, 0, 0); transform: translate(0); }
+    }
+
+    /* === Responsivo === */
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Fuente ciberpunk */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Media Queries</title>
+  <style>
+    .container {
+      background-color: lightgray;
+      padding: 20px;
+      border: 1px solid black;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        background-color: lightblue;  /* Fondo azul claro en pantallas pequeñas */
+      }
+    }
+
+    @media (min-width: 601px) and (max-width: 1024px) {
+      .container {
+        background-color: lightgreen;  /* Fondo verde claro en pantallas medianas */
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .container {
+        background-color: lightcoral;  /* Fondo coral claro en pantallas grandes */
+      }
+    }
+
+    @media (orientation: landscape) {
+      .container {
+        color: blue;  /* Cambia el color del borde a azul en modo paisaje */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p>Media Queries permite aplicar estilos CSS dependiendo de las características del dispositivo o pantalla.</p>
+    <p>En este ejemplo el color de fondo cambia dependiendo de la anchura del viewport y el color del texto cambia dependiendo de la orientación.</p>
+    <p>Redimensiona la ventana para ver los cambios</p>
+  </div>
+</body>
+</html>
+
+

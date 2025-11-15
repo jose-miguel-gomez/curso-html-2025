@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Grid + Media Queries">
+    <meta name="keywords" content="HTML, CSS, Grid, Media Queries">
+    <meta name="author" content="José Miguel Gómez">
+    <title>Grid + Media Query</title>
+    <link rel="stylesheet" type="text/css" href="css/css_ejemplo21.css">
+</head>
+
+
+<body>
+
+<div class="contenedor">
+
+    <div class="header"><h1>Grid + Media Query</h1></div>
+
+    <div class="menu">
+        <h2>Menú de navegación</h2>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#ejemplo1">Ejemplo 1</a></li>
+            <li><a href="#ejemplo2">Ejemplo 2</a></li>
+            <li><a href="#ejemplo3">Ejemplo 3</a></li>
+            <li><a href="#ejemplo4">Ejemplo 4</a></li>
+        </ul>
+    </div>
+    
+    <div class="main">
+        <div class="ancla" id="inicio"><h2 id="inicio">Grid + Media Query</h2></div>
+        <p>En este ejemplo, nuestra web constará de 5 áreas:</p> 
+        <ol>
+        <li><p>Encabezado (header)</p></li>
+        <li><p>Menú de navegación (menu)</p></li>
+        <li><p>Contenido principal (main)</p></li>
+        <li><p>Contenido complementario (aside)</p></li>
+        <li><p>Pie (footer)</p></li>
+        </ol>
+        <p>Partiendo de una estructura básica formada por una única columna y 5 filas (una por área) realizaramos modificaciones dependiendo de la anchura de la ventana de navegación (viewport).</p>
+        <div class="ancla" id="ejemplo1"><h3>Ejemplo 1</h3></div>
+        <p>Si el ancho de la ventana es inferior a 600 px, usaremos la estructura básica, pero ocultando el menú y el contenido complementario.</p>
+        <img src="img/ej21_img1.png">
+        <div class="ancla" id="ejemplo2"><h3>Ejemplo 2</h3></div>
+        <p>Si el ancho está entre 600 y 900 px usaremos la estructura básica</p>
+        <img src="img/ej21_img2.png">
+        <div class="ancla" id="ejemplo3"><h3>Ejemplo 3</h3></div>
+        <p>Si el ancho está entre 900 y 1200 px modificaremos la estructura básica de modo que el menú quede a la izquierda.</p>
+        <img src="img/ej21_img3.png">
+        <div class="ancla" id="ejemplo4"><h3>Ejemplo 4</h3></div>
+        <p>Si el ancho es superior a 1200 px modificaremos aún más la estructura básica de modo que el contenido complementario quede a la derecha.</p>
+        <img src="img/ej21_img4.png">
+
+
+    </div>
+
+    <div class="aside">
+        <h3>Para saber más</h3>     
+        <p>Si quieres más información sobre el uso de Media Queries puedes visitar las siguientes Webs:</p> 
+        <p><a href="ejercicio_19.html"> Web 1</a></p>
+        <p><a href="ejercicio_20.html"> Web 2</a></p>
+        <p><a href="ejercicio_22.html"> Web 3</a></p>
+
+    </div>
+
+    <div class="footer"><h3>Redimensiona la ventana para ver los cambios</h3></div>
+  
+</div>
+
+</body>
+</html>
+
+
+
