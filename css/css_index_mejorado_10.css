@@ -1,0 +1,187 @@
+
+/* ----------------------------------
+   VARIABLES DE COLOR
+-----------------------------------*/
+:root {
+    /* Body claro */
+    --body-bg: #f5f7fa;
+    --body-color: #000;
+
+    /* Header y footer claros */
+    --header-bg: linear-gradient(90deg,#ff922b,#ff6b6b);
+    --header-color: #fff;
+    --footer-bg: linear-gradient(90deg,#22b8cf,#51cf66);
+    --footer-color: #fff;
+
+    /* Acordeón texto */
+    --accordion-text-closed: #fff;
+    --accordion-text-open: #000;
+
+    /* Colores de acordeón normal */
+    --accordion-bg-ejercicios: #ff922b;
+    --accordion-bg-ia: #495057;
+    --accordion-bg-recursos: #2b8a3e;
+    --accordion-bg-html: #e63946;
+    --accordion-bg-css: #457b9d;
+    --accordion-bg-box: #6a4c93;
+    --accordion-bg-flexbox: #2a9d8f;
+    --accordion-bg-avanzados: #f4d35e;
+    --accordion-bg-grid: #f72585;
+    --accordion-bg-media: #3ad5ca;
+    --accordion-bg-bootstrap: #48cae4;
+    --accordion-bg-components: #c9184a;
+}
+
+/* ----------------------------------
+   MODO DARK: grises jerarquizados de claro a oscuro
+-----------------------------------*/
+body.dark {
+    --body-bg: #121212;
+    --body-color: #eee;
+
+    /* Header gris claro */
+    --header-bg: linear-gradient(90deg,#3a3a3a,#4d4d4d);
+    --header-color: #eee;
+
+    /* Footer gris oscuro */
+    --footer-bg: linear-gradient(90deg,#1a1a1a,#2d2d2d);
+    --footer-color: #eee;
+
+    /* Acordeón texto */
+    --accordion-text-closed: #ddd;
+    --accordion-text-open: #fff;
+
+    /* Secciones principales */
+    --accordion-bg-ejercicios: #505050;
+    --accordion-bg-ia: #484848;
+    --accordion-bg-recursos: #404040;
+
+    /* Subsecciones jerarquizadas de gris más claro a más oscuro */
+    --accordion-bg-html: #5a5a5a;
+    --accordion-bg-css: #565656;
+    --accordion-bg-box: #525252;
+    --accordion-bg-flexbox: #505050;
+    --accordion-bg-avanzados: #4c4c4c;
+    --accordion-bg-grid: #485050;
+    --accordion-bg-media: #444444;
+    --accordion-bg-bootstrap: #404040;
+    --accordion-bg-components: #3c3c3c;
+}
+
+/* ----------------------------------
+   BODY
+-----------------------------------*/
+body {
+    background: var(--body-bg);
+    color: var(--body-color);
+    transition: all 0.3s ease;
+}
+
+/* ----------------------------------
+   HEADER & FOOTER
+-----------------------------------*/
+header, footer {
+    text-align: center;
+    transition: all 0.3s ease;
+}
+header { 
+    background: var(--header-bg); 
+    color: var(--header-color); 
+    position: relative;
+    padding: 40px 15px;
+}
+footer { 
+    background: var(--footer-bg); 
+    color: var(--footer-color); 
+    padding: 20px 15px;
+}
+
+/* Centrado título */
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+/* Botón toggle */
+#toggleTheme {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 500;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 4px 10px;
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.2);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+#toggleTheme:hover {
+    background-color: rgba(255,255,255,0.5);
+}
+
+/* ----------------------------------
+   ACORDEÓN
+-----------------------------------*/
+.accordion-button.collapsed,
+.accordion-button.collapsed * { color: var(--accordion-text-closed) !important; }
+.accordion-button:not(.collapsed),
+.accordion-button:not(.collapsed) * { color: var(--accordion-text-open) !important; }
+
+.accordion-button.collapsed::after { filter: invert(1); }
+.accordion-button:not(.collapsed)::after { filter: invert(0); }
+
+.accordion-button { transition: all 0.3s ease; }
+.accordion-button:hover { transform: scale(1.02); filter: brightness(1.2); }
+
+/* Fondos por sección/subsección usando variables */
+#headingEjercicios .accordion-button { background: var(--accordion-bg-ejercicios); }
+#headingIA .accordion-button { background: var(--accordion-bg-ia); }
+#headingRecursos .accordion-button { background: var(--accordion-bg-recursos); }
+
+#headingHTML .accordion-button { background: var(--accordion-bg-html); }
+#headingCSS .accordion-button { background: var(--accordion-bg-css); }
+#headingBox .accordion-button { background: var(--accordion-bg-box); }
+#headingFlexbox .accordion-button { background: var(--accordion-bg-flexbox); }
+#headingAvanzados .accordion-button { background: var(--accordion-bg-avanzados); }
+#headingGrid .accordion-button { background: var(--accordion-bg-grid); }
+#headingMedia .accordion-button { background: var(--accordion-bg-media); }
+#headingBootstrap .accordion-button { background: var(--accordion-bg-bootstrap); }
+#headingComponents .accordion-button { background: var(--accordion-bg-components); }
+
+/* ----------------------------------
+   GRID DE ENLACES
+-----------------------------------*/
+.accordion-body ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-left: 0;
+    list-style: none;
+}
+.accordion-body ul li { margin: 0; border-left: 3px double red; }
+
+.accordion-body ul li p {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+.accordion-body ul li p:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+/* Enlaces */
+a { color: #0d6efd; font-weight: 500; text-decoration: none; padding-left: 5px; }
+a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 700px) { .accordion-body ul { grid-template-columns: 1fr; } }
+
+    
