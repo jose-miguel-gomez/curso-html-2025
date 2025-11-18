@@ -85,8 +85,12 @@ h2{font-weight: bold;}
 
 
 @media (max-width: 767px) {
-  h2, h3 {
-  scroll-margin-top: 360px; 
+ #contenido h2, #articulo1 h3 {
+  scroll-margin-top: 360px; }
+ #articulo2 h3 {
+  scroll-margin-top: 285px; }
+ #articulo4 h3 {
+  scroll-margin-top: 320px; }
 }
 
 
